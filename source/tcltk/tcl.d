@@ -1156,7 +1156,7 @@ enum TCL_CHANNEL_THREAD_REMOVE = (1);
 alias extern(C) int function(ClientData instanceData, int mode) nothrow Tcl_DriverBlockModeProc;
 alias extern(C) int function(ClientData instanceData, Tcl_Interp* interp) nothrow Tcl_DriverCloseProc;
 alias extern(C) int function(ClientData instanceData, Tcl_Interp* interp, int flags) nothrow Tcl_DriverClose2Proc;
-alias extern(C) int function(ClientData instanceData, const(char)* buf, int toRead, int* errorCodePtr) nothrow Tcl_DriverInputProc;
+alias extern(C) int function(ClientData instanceData, char* buf, int toRead, int* errorCodePtr) nothrow Tcl_DriverInputProc;
 alias extern(C) int function(ClientData instanceData, const(char)* buf, int toWrite, int* errorCodePtr) nothrow Tcl_DriverOutputProc;
 alias extern(C) int function(ClientData instanceData, long offset, int mode, int* errorCodePtr) nothrow Tcl_DriverSeekProc;
 alias extern(C) int function(ClientData instanceData, Tcl_Interp* interp, const(char)* optionName, const(char)* value) nothrow Tcl_DriverSetOptionProc;
